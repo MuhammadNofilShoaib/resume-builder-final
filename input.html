@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+</head>
+
+<body class="input">
+
+   <nav>
+      <ul class="sidebar">
+         <li onclick=hideSidebar()><a class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="35px"
+                  viewBox="0 -960 960 960" width="35px" fill="#e8eaed">
+                  <path
+                     d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+               </svg></a></li>
+         <li><a href="index.html">home → </a></li>
+         <li><a href="about.html">about → </a></li>
+         <li><a href="#connect">connect → </a></li>
+         <li><a href="input.html"><button class="btn">Build Resume → </button></a></li>
+      </ul>
+      <ul>
+         <li class="logo"
+            style="font-size: xx-large; font-family: cursive; text-transform: uppercase; font-weight: bolder; text-shadow: 1px 1px 0px black;">
+            n.resume</li>
+         <li class="hideOnMobile"><a href="index.html">home → </a></li>
+         <li class="hideOnMobile"><a href="about.html">about → </a></li>
+         <li class="hideOnMobile"><a href="#connect">connect → </a></li>
+         <li class="hideOnMobile"><a href="input.html"><button class="btn">Build Resume → </button></a></li>
+         <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                  viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
+                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+               </svg></a></li>
+      </ul>
+   </nav>
+   <div id="formArea" class="content" style=" align-content: center;">
+
+      
+      <h1 class="heading">enter details👇</h1>
+      <h2 class="question">personal Details:</h2> 
+
+      <div>
+         <h3>enter your name:</h3>
+         <input type="text" name="name" id="name" placeholder="e.g. Nofil">
+      </div>
+
+      <div>
+         <h3>enter your email:</h3>
+         <input type="email" name="email" id="email" placeholder="e.g. nof123@***.com">
+      </div>
+
+      <div>
+         <h3>enter your phone # :</h3>
+         <input type="tel" name="phone" id="phone" placeholder="e.g. +923**-*******">
+      </div>
+
+      <div>
+         <h3>upload photo:</h3>
+         <div class="custom-upload">
+            <label for="photo" class="custom-label">Upload Photo</label>
+            <input type="file" name="photo" id="photo" accept="image/*">
+         </div>
+      </div>
+
+      <h2 class="question">education:</h2>
+
+      <div id="education-section">
+         <h3>enter your institute:</h3>
+         <input type="text" name="school-name" id="school-name" placeholder="e.g. british international school">
+         <h3>Enter your degree:</h3>
+        <input type="text" name="degree" id="degree" placeholder="e.g. Matriculation">
+      </div>
+
+      <h2 class="question">experience:</h2>
+
+      <div id="experience-section">
+         <h3>enter your institute:</h3>
+         <input type="text" name="ins-name" id="ins-name" placeholder="e.g. british international school">
+         <h3>Enter your role:</h3>
+        <input type="text" name="ins-role" id="ins-role" placeholder="e.g. Matriculation">
+      </div>
+
+      <div id="skills-section">
+         <h3>enter your skills:</h3>
+         <h5 style="color: gray; margin-bottom: 8px;">*comma seperated</h5>
+         <input type="text" name="skills-name" id="skills-name" placeholder="e.g. Web Designing e.t.c">
+      </div>
+
+      <div id="projects-section">
+         <h3>enter your projects:</h3>
+         <h5 style="color: gray; margin-bottom: 8px;">*comma seperated</h5>
+         <input type="text" name="projects-name" id="projects-name" placeholder="e.g. Netflix Clone e.t.c">
+      </div>
+      <div>
+        <button id="submitBtn" class="main">Submit →</button>
+      </div>
+      </div>
+       
+     <div id="output" style="margin-top: 70px;">
+   <div class="resume-header">
+      <div id="photoDisplay"></div>
+    <h1 id="outputName">Name</h1>
+    <a id="outputEmail"  href="mailto:" style="text-transform: lowercase; text-decoration: none;"></a>
+    <p id="outputPhone" style="color: #333;"></p>
+  </div>
+
+  <div class="resume-section">
+    <h2>Education</h2>
+    <div class="resume-content">
+      <p><strong id="outputSchool">School Name</strong></p>
+      <p id="outputDegree">Degree</p>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h2>Experience</h2>
+    <div class="resume-content">
+      <p><strong id="outputIns">Company Name</strong></p>
+      <p id="outputRole">Job Title</p>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h2>Skills</h2>
+    <div class="resume-content">
+      <p id="outputSkills"></p>
+      <p id="outputSkills1"></p> 
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <h2>Projects</h2>
+    <div class="resume-content">
+      <p id="outputProjects"></p>
+    </div>
+</div>
+<button id="printBtn">download ⬇️</button>
+<button id="shareBtn">share ↗️</button>
+
+</div>
+
+
+      <div class="footer">
+         <h2>connect on social media❤️</h2>
+         <div id="connect" class="social-logo">
+            <a href="https://www.youtube.com/@Itsgamingwarden" target="_blank"><img class="social" src="yt.png"
+                  alt="yt"></a>
+            <a href="https://www.linkedin.com/in/nofil-shoaib-6b284328a" target="_blank"><img class="social"
+                  src="li.png" alt="li"></a>
+            <a href="https://github.com/MuhammadNofilShoaib" target="_blank"><img class="social" src="gh1.jpg"
+                  alt="gh"></a>
+            <a href="https://www.instagram.com/muhammad_nofil_shoaib/" target="_blank"><img class="social" src="ig.png"
+                  alt="ig"></a>
+         </div>
+      </div>
+
+
+      <script>
+
+         function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+         }
+
+         function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+         }
+
+         const printBtn = document.getElementById('printBtn')
+
+         printBtn.addEventListener('click', () => {
+            print();
+         })
+         
+         document.getElementById('shareBtn')?.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Share!',
+                    text: 'Check out this amazing page!',
+                    url: window.location.href
+                })
+                .then(() => { 
+                    console.log('Share successful!');
+                })
+                .catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                console.log('Share not supported on this browser.');    
+            }
+        });
+
+
+
+      </script>
+      <script src="script.js"></script>
+</body>
+
+</html>

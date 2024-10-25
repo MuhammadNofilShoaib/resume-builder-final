@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body class="about">
+    <nav>
+        <ul class="sidebar">
+           <li onclick=hideSidebar()><a class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+           <li><a href="index.html">home → </a></li>
+           <li><a href="about.html">about → </a></li>
+           <li><a href="#connect">connect → </a></li>
+           <li><a href="input.html"><button class="btn">Build Resume → </button></a></li>
+        </ul>
+        <ul>
+           <li class="logo" style="font-size: xx-large; font-family: cursive; text-transform: uppercase; font-weight: bolder; text-shadow: 1px 1px 0px black;">n.resume</li>
+           <li class="hideOnMobile"><a href="index.html">home → </a></li>
+           <li class="hideOnMobile"><a href="about.html">about → </a></li>
+           <li class="hideOnMobile"><a href="#connect">connect → </a></li>
+           <li class="hideOnMobile"><a href="input.html"><button class="btn">Build Resume → </button></a></li>
+           <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+       </nav>
+
+     <div class="content" style="height: 58vh; align-content: center;">
+        <h1 class="heading">About This Resume Builder🔥</h1>
+        <p style="padding: 0 200px;" class="p1">Welcome to our easy-to-use Resume Builder, designed to help you create professional resumes in minutes. Whether you’re a student, fresh graduate, or experienced professional, this tool provides customizable templates that highlight your skills and achievements in the best possible way. Simply fill in your details, and watch your resume take shape instantly!
+            Our goal is to simplify the resume-building process, making it accessible to everyone. With clean designs, intuitive fields, and step-by-step guidance, you’ll have a polished resume ready to impress potential employers.</p>
+        <a href="input.html"><button class="main">Create My Resume →</button></a>
+     </div>
+
+     <div class="footer">
+        <h2>connect on social media❤️</h2>
+        <div id="connect" class="social-logo">
+            <a  href="https://www.youtube.com/@Itsgamingwarden" target="_blank"><img class="social" src="yt.png" alt="yt"></a>
+            <a  href="https://www.linkedin.com/in/nofil-shoaib-6b284328a" target="_blank"><img class="social" src="li.png" alt="li"></a>
+            <a  href="https://github.com/MuhammadNofilShoaib" target="_blank"><img class="social" src="gh1.jpg" alt="gh"></a>
+            <a  href="https://www.instagram.com/muhammad_nofil_shoaib/" target="_blank"><img class="social" src="ig.png" alt="ig"></a>
+        </div>
+        <p>created with 🤩 nofil shoaib</p> 
+     </div>
+
+     <script>
+
+        function showSidebar() {
+           const sidebar = document.querySelector('.sidebar');
+           sidebar.style.display = 'flex';
+        }
+  
+        function hideSidebar() {
+           const sidebar = document.querySelector('.sidebar');
+           sidebar.style.display = 'none';
+        }
+       </script>
+</body>
+</html>
