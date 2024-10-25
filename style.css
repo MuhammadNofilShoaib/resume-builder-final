@@ -419,7 +419,8 @@ input:hover {
 
 
 #printBtn,
-#shareBtn {
+#shareBtn,
+#editBtn {
     border: none;
     background-color: #1a91f0;
     padding: 10px 20px;
@@ -437,6 +438,11 @@ input:hover {
 }
 
 #shareBtn:hover {
+    background-color: #1a6cae;
+    scale: 105%;
+}
+
+#editBtn:hover {
     background-color: #1a6cae;
     scale: 105%;
 }
