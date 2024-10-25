@@ -78,6 +78,11 @@
          <input type="text" name="school-name" id="school-name" placeholder="e.g. british international school">
          <h3>Enter your degree:</h3>
         <input type="text" name="degree" id="degree" placeholder="e.g. Matriculation">
+        <h5 style="color: gray; margin-bottom: 8px;">*optional⬇️</h5>
+        <h3>enter your institute:</h3>
+        <input type="text" name="school-name" id="school-name1" placeholder="e.g. british international school">
+         <h3>Enter your degree:</h3>
+        <input type="text" name="degree" id="degree1" placeholder="e.g. Matriculation">
       </div>
 
       <h2 class="question">experience:</h2>
@@ -87,6 +92,11 @@
          <input type="text" name="ins-name" id="ins-name" placeholder="e.g. british international school">
          <h3>Enter your role:</h3>
         <input type="text" name="ins-role" id="ins-role" placeholder="e.g. Matriculation">
+        <h5 style="color: gray; margin-bottom: 8px;">*optional⬇️</h5>
+        <h3>enter your institute:</h3>
+        <input type="text" name="ins-name" id="ins-name1" placeholder="e.g. british international school">
+         <h3>Enter your role:</h3>
+        <input type="text" name="ins-role" id="ins-role1" placeholder="e.g. Matriculation">
       </div>
 
       <div id="skills-section">
@@ -118,6 +128,8 @@
     <div class="resume-content">
       <p><strong id="outputSchool">School Name</strong></p>
       <p id="outputDegree">Degree</p>
+      <p><strong id="outputSchool1">School Name</strong></p>
+      <p id="outputDegree1">Degree</p>
     </div>
   </div>
 
@@ -126,6 +138,8 @@
     <div class="resume-content">
       <p><strong id="outputIns">Company Name</strong></p>
       <p id="outputRole">Job Title</p>
+      <p><strong id="outputIns1">Company Name</strong></p>
+      <p id="outputRole1">Job Title</p>
     </div>
   </div>
 
@@ -207,9 +221,8 @@
 
         const editBtn = document.getElementById('editBtn');
         editBtn.addEventListener('click', () => {
-    // Toggle form view
     formArea.style.display = 'block';
-    output.style.display = 'none';
+    output.style.display = 'none'; 
 });
 
 
