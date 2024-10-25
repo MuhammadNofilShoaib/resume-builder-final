@@ -6,9 +6,13 @@ const photoInput = document.getElementById('photo') as HTMLInputElement;
 
 const schoolInput = document.getElementById('school-name') as HTMLInputElement;
 const degreeInput = document.getElementById('degree') as HTMLInputElement;
+const schoolInput1 = document.getElementById('school-name1') as HTMLInputElement;
+const degreeInput1 = document.getElementById('degree1') as HTMLInputElement;
 
 const insInput = document.getElementById('ins-name') as HTMLInputElement;
 const roleInput = document.getElementById('ins-role') as HTMLInputElement;
+const insInput1 = document.getElementById('ins-name1') as HTMLInputElement;
+const roleInput1 = document.getElementById('ins-role1') as HTMLInputElement;
 
 const skillsInput = document.getElementById('skills-name') as HTMLInputElement;
 const skillsInput1 = document.getElementById('skills-name1') as HTMLInputElement;
@@ -22,9 +26,13 @@ const photoDisplay = document.getElementById('photoDisplay') as HTMLElement;
 
 const outputSchool = document.getElementById('outputSchool') as HTMLElement;
 const outputDegree = document.getElementById('outputDegree') as HTMLElement;
+const outputSchool1 = document.getElementById('outputSchool1') as HTMLElement;
+const outputDegree1 = document.getElementById('outputDegree1') as HTMLElement;
 
 const outputIns = document.getElementById('outputIns') as HTMLElement;
 const outputRole = document.getElementById('outputRole') as HTMLElement;
+const outputIns1 = document.getElementById('outputIns1') as HTMLElement;
+const outputRole1 = document.getElementById('outputRole1') as HTMLElement;
 
 const outputSkills = document.getElementById('outputSkills') as HTMLElement;
 const outputSkills1 = document.getElementById('outputSkills1') as HTMLElement;
@@ -58,9 +66,13 @@ submitBtn.addEventListener('click', () => {
 
     outputSchool.textContent = schoolInput.value;
     outputDegree.textContent = degreeInput.value;
+    outputSchool1.textContent = schoolInput1.value;
+    outputDegree1.textContent = degreeInput1.value;
 
     outputIns.textContent = insInput.value;
     outputRole.textContent = roleInput.value;
+    outputIns1.textContent = insInput1.value;
+    outputRole1.textContent = roleInput1.value;
 
     outputSkills.textContent = skillsInput.value;
     outputProjects.textContent = projectsInput.value;
@@ -68,6 +80,9 @@ submitBtn.addEventListener('click', () => {
 
 
 });
+
+
+
 
 
 
