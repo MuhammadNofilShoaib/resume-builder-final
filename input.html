@@ -145,6 +145,7 @@
 </div>
 <button id="printBtn">download ⬇️</button>
 <button id="shareBtn">share ↗️</button>
+<button id="editBtn">edit ✏️</button>
 
 </div>
 
@@ -199,6 +200,17 @@
                 console.log('Share not supported on this browser.');    
             }
         });
+
+        document.getElementById('editBtn').addEventListener('click', () => {
+         
+        })
+
+        const editBtn = document.getElementById('editBtn');
+        editBtn.addEventListener('click', () => {
+    // Toggle form view
+    formArea.style.display = 'block';
+    output.style.display = 'none';
+});
 
 
 
