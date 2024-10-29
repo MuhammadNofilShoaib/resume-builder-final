@@ -158,6 +158,7 @@ p1 {
 
 .main:hover {
     background-color: #1a6cae;
+    transform: translateY(5px);
 }
 
 .nav2 {
@@ -446,3 +447,39 @@ input:hover {
     background-color: #1a6cae;
     scale: 105%;
 }
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.content,
+.nav2,
+.images,
+#name,
+#email,
+#phone,
+#photo,
+#school-name,
+#degree,
+#school-name1,
+#degree1,
+#ins-name,
+#ins-role,
+#ins-name1,
+#ins-role1,
+#skills-name,
+#projects-name,
+#submitBtn
+    {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
