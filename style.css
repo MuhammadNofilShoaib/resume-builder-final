@@ -164,11 +164,19 @@ p1 {
 .nav2 {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 50px;
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
 }
+
+@media (max-width : 452px) {
+    .nav2 {
+        display: none;
+    }
+}
+
 
 .emoji {
     filter: saturate(0);
@@ -448,37 +456,79 @@ input:hover {
     scale: 105%;
 }
 
-@keyframes appear {
+
+@keyframes loading {
     from {
         opacity: 0;
         transform: translateX(-100px);
-    }
-    to {
+    } to {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-.content,
-.nav2,
-.images,
-#name,
-#email,
-#phone,
-#photo,
-#school-name,
-#degree,
-#school-name1,
-#degree1,
-#ins-name,
-#ins-role,
-#ins-name1,
-#ins-role1,
-#skills-name,
-#projects-name,
-#submitBtn
-    {
-    animation: appear linear;
+.heading,
+.p1 {
+    animation: loading;
+    animation-duration: 1s;
+    transition: all;
+    animation-timing-function: ease-in-out;
+}
+
+.main {
+    animation: loading;
+    animation-duration: 1s;
+    transition: all;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes loading1 {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+        
+    }
+}
+
+.nav2 {
+    animation: loading1;
+    animation-duration: 1s;
+    transition: all;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes sidebar {
+    from {
+        transform: translateX(100px);
+    } to {
+        transform: translateX(0px);
+    }
+}
+
+.sidebar {
+    animation: loading1;
+    animation-duration: 0.3s;
+    transition: all;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes picture {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.resumepic {
+    animation: picture;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
